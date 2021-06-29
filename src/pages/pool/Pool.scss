@@ -1,0 +1,218 @@
+.pool-container {
+    padding-bottom: 80px;
+  
+    .adv-img-container img {
+      height: 150px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 50px;
+      width: 100%;
+      object-fit: contain;
+    }
+    .adv-img-2 img{
+        height: 120px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+        width: 100%;
+        object-fit: contain;
+      }
+    .liquidity-container{
+        display: flex;
+    justify-content: center;
+    padding-top: 100px;
+
+    .liquidity-wrap{
+    max-width: 640px;
+    width: 100%;
+
+    .liquidity-rewards-bg-gradient{
+        display: grid;
+        grid-auto-rows: auto;
+        border-radius: 12px;
+        width: 100%;
+        position: relative;
+        background: radial-gradient(76.02% 75.41% at 1.84% 0%, rgb(39, 174, 96) 0%, rgb(0, 0, 0) 100%);
+        overflow: hidden;
+
+        .liquidity-rewards-bg-img{
+            width: 1000px;
+    height: 600px;
+    position: absolute;
+    border-radius: 12px;
+    opacity: 0.4;
+    top: -100px;
+    left: -100px;
+    transform: rotate(-15deg);
+    user-select: none;
+        }
+        .liquidity-rewards-overlay{
+            mix-blend-mode: overlay;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-size: 0% 0% / cover;
+    border-radius: 12px;
+        }
+        .liquidity-content{
+            padding: 1rem;
+            display: grid;
+    grid-auto-rows: auto;
+    row-gap: 12px;
+        
+            h3{
+                font-weight: 600;
+                color: #fff;
+                font-size: 16px;
+                margin: 0;
+    line-height: 30px;
+            }
+            p{
+                font-weight: 500;
+                color: #fff;
+                font-size: 14px; 
+                line-height: 30px;
+                margin: 0;
+            }
+        }
+    }
+    .liquidity-picker{
+        display: grid;
+        grid-auto-rows: auto;
+        row-gap: 24px;
+
+        .liquidity-row-1{
+            box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    label{
+        box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 0.5rem;
+    justify-self: flex-start;
+    color: #fff;
+    }
+    .btn-wrap{
+        display: flex;
+
+        .btn-stroke{
+            font-weight: 500;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgb(255, 159, 0);
+    color: rgb(255, 159, 0);
+    background-color: transparent;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 6px 8px;
+    width: fit-content;
+    height: 50px;
+        }
+        .btn-stroke:hover{ border: 1px solid rgb(255, 159, 0); }
+        .btn-stroke.active, 
+        .btn-stroke:focus{
+            box-shadow: rgb(255, 159, 0) 0px 0px 0px 1pt;
+            border: 1px solid rgb(255, 159, 0);
+        }
+        .btn-yellow{
+            padding: 6px 8px;
+    font-weight: 500;
+    text-align: center;
+    border-radius: 12px;
+    outline: none;
+    border: 1px solid transparent;
+    text-decoration: none;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background-color: rgb(255, 159, 0);
+    color: white;
+    width: fit-content;
+    height: 50px;
+        }
+        .btn-yellow:hover{ background-color: rgb(230, 143, 0); }
+        .btn-yellow:focus{ 
+            background-color: rgb(230, 143, 0);
+            box-shadow: rgb(230, 143, 0) 0px 0px 0px 1pt;
+        }
+    }
+        }
+        .liquidity-row-2{
+            box-sizing: border-box;
+    margin: 0px;
+    width: 100%;
+    border-radius: 16px;
+    padding: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgb(108, 114, 132);
+    text-align: center;
+        }
+        .liquidity-row-3{
+            padding: 0.5rem 0px;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            line-height: 30px;
+
+            a{
+                color: rgb(255, 159, 0);
+    font-weight: 500;
+            }
+        }
+    }
+    }
+    }
+    .btn-back-to-home{
+        position: fixed;
+        display: flex;
+        right: 0px;
+        bottom: 0px;
+        padding: 1rem;
+        transition: opacity 0.25s ease 0s;
+        color: rgb(39, 174, 96);
+
+        span{
+            width: 8px;
+          height: 8px;
+          min-height: 8px;
+          min-width: 8px;
+          margin-left: 0.5rem;
+          margin-top: 3px;
+          border-radius: 50%;
+          position: relative;
+          background-color: rgb(39, 174, 96);
+          }
+    }
+  }
+  

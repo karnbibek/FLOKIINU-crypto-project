@@ -1,0 +1,55 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  top: 0px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  z-index: 2;
+  background-color: transparent !important;
+  min-height: 81px;
+}
+
+.navbar a.navbar-brand {
+  width: 9%;
+}
+
+.navbar a.navbar-brand img {
+  width: 100%;
+}
+
+.navbar a.navbar-brand:hover img {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-transition: -webkit-transform 0.3s ease 0s;
+  transition: -webkit-transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s;
+  transition: transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s;
+}
+
+.navbar-expand .navbar-nav a {
+  color: black;
+  font-weight: 500;
+  border-radius: 12px;
+  margin: 0px 12px;
+  font-size: 1rem;
+}
+
+.navbar-expand .navbar-nav a.active {
+  color: yellow;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=Header.component.css.map */

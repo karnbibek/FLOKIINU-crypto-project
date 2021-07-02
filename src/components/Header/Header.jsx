@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import {
-  Navbar,
-  Nav,
-  Button,
-  Form,
-  Popover,
-} from "react-bootstrap";
+import { Navbar, Nav, Button, Form, Popover } from "react-bootstrap";
 import transakSDK from "@transak/transak-sdk";
 
 import ConnectToAWalletModal from "../Modals/ConnectToAWalletModal";
@@ -59,14 +53,14 @@ class Header extends Component {
   };
 
   handleSlippageValue = () => {
-    const slippageTolerance = localStorage.getItem('userSlippageTolerance');
+    const slippageTolerance = localStorage.getItem("userSlippageTolerance");
     console.log(slippageTolerance);
     if (slippageTolerance > 0) {
       this.setState({
-        slippageValue: slippageTolerance
+        slippageValue: slippageTolerance,
       });
     }
-  }
+  };
 
   componentDidMount() {
     this.handleSlippageValue();
@@ -109,35 +103,46 @@ class Header extends Component {
     return (
       <div className="navbar">
         <Navbar collapseOnSelect expand="md" variant="dark">
-          <Navbar.Brand href="#home">
-            <img src={logo} alt="floki logo" />
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="navbar-flex">
-            <Nav className="navbar-center">
-              <div className="navbar-center-bg">
-                <NavLink activeClassName="active" to="/swap">
-                  <Nav.Link href="/swap" className="navbar-text">
-                    Swap
+          <div className="navbar-left">
+            <Navbar.Brand href="#home">
+              <img src={logo} alt="floki logo" />
+            </Navbar.Brand>
+            {/* <Navbar.Toggle aria-controls="responsive-navbar-nav" /> */}
+            <Navbar.Collapse id="responsive-navbar-nav" className="navbar-flex">
+              <Nav className="navbar-center">
+                <div className="navbar-center-bg">
+                  <NavLink activeClassName="active" to="/swap">
+                    <Nav.Link href="/swap" className="navbar-text">
+                      Swap
+                    </Nav.Link>
+                  </NavLink>
+                  {/* <NavLink activeClassName="active" onClick={this.transakOpen}> */}
+                  <Nav.Link
+                    className="navbar-text"
+                    onClick={() => this.transakOpen()}
+                  >
+                    Pool
+                    <img
+                      src={bnbicon}
+                      alt="bnb"
+                      style={{ height: "26px", marginLeft: "4px" }}
+                    />
                   </Nav.Link>
-                </NavLink>
-                {/* <NavLink activeClassName="active" onClick={this.transakOpen}> */}
-                <Nav.Link
-                  className="navbar-text"
-                  onClick={() => this.transakOpen()}
-                >
-                  Pool
-                  <img src={bnbicon} alt="bnb" style={{height: '26px', marginLeft: '4px'}} />
-                </Nav.Link>
-                {/* </NavLink> */}
-              </div>
-            </Nav>
-            <Form inline>
-              <Button className="btn btn-black mx-sm-auto" onClick={this.handleOpenModal}>
-                Connect to a wallet
+                  {/* </NavLink> */}
+                </div>
+              </Nav>
+            </Navbar.Collapse>
+          </div>
+          <div className="navbar-form-res">
+            <Form inline className="navbar-flex-form">
+              <Button
+                className="btn btn-black navbar-flex-form-btn"
+                onClick={this.handleOpenModal}
+              >
+                Connect
               </Button>{" "}
               <Button
-                className="btn btn-yellow ml-lg-2 ml-sm-0 mx-sm-auto"
+                className="btn btn-yellow mx-2"
                 onClick={(e) => this.handleClick(e)}
               >
                 <svg
@@ -157,7 +162,10 @@ class Header extends Component {
                 </svg>
               </Button>{" "}
             </Form>
-          </Navbar.Collapse>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          </div>
+
+          {/* </Navbar.Collapse> */}
         </Navbar>
         <SettingsOverLay
           show={show}

@@ -10,13 +10,55 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding: 1rem;
   z-index: 2;
-  // background: rgba(32, 37, 61, 1) !important;
   background: transparent;
   background-color: #1a1a1b;
   min-height: 81px;
 
+  &-expand-md {
+    @media (max-width: 767px) {
+      align-items: center;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 0;
+    min-height: 0;
+    align-items: flex-start;
+  }
+
+  &-form-res {
+    align-self: center;
+    display: flex;
+    flex: none;
+    @media screen and (min-width: 1304px) {
+      display: flex;
+      align-self: center;
+    }
+    @media screen and (max-width: 767px) {
+      align-self: flex-start;
+    }
+  }
+
+  &-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 50%;
+    }
+    @media screen and (max-width: 465px) {
+      width: 30%;
+    }
+  }
+
   &-flex {
     display: flex;
+    justify-content: center;
 
     @media screen and (max-width: 990px) {
       display: block;
@@ -43,13 +85,26 @@
       }
     }
 
-    // @media screen and (min-width: 990px) {
-    //   display: block;
-    // }
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 .navbar a.navbar-brand {
-  width: 4%;
+  width: 6%;
+  @media screen and (max-width: 990px) {
+    width: 7%;
+  }
+  @media screen and (max-width: 770px) {
+    width: 12%;
+  }
+  @media screen and (max-width: 620px) {
+    width: 15%;
+  }
+  @media screen and (max-width: 480px) {
+    width: 20%;
+  }
   img {
     width: 100%;
   }

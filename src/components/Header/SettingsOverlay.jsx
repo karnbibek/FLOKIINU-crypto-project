@@ -35,7 +35,7 @@ const SettingsOverLay = ({ show, target, handleHide, handleSlippageValue }) => {
             <div>
               <label>Slippage tolerance</label>
               <OverlayTrigger
-                placement="left"
+                placement="bottom"
                 overlay={
                   <Tooltip className="custom-tooltip">
                     Your transaction will revert if the price changes

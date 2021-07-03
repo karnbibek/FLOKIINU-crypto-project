@@ -7,7 +7,7 @@ import logo from "../../images/flokifinal.png";
 import bnbicon from "../../images/bnb-icon.png";
 import Overlay from "react-bootstrap/Overlay";
 import { NavLink } from "react-router-dom";
-import SettingsOverLay from "./SettingsOverlay";
+import SettingOverLay from "./SettingOverlay";
 import "./Header.component.scss";
 class Header extends Component {
   constructor(props) {
@@ -167,8 +167,9 @@ class Header extends Component {
 
           {/* </Navbar.Collapse> */}
         </Navbar>
-        <SettingsOverLay
+        <SettingOverLay
           show={show}
+          onHide={this.handleHide}
           target={target}
           handleHide={this.handleHide}
         />

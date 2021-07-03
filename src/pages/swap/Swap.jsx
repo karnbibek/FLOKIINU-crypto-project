@@ -6,6 +6,7 @@ import ConnectToAWalletModal from "../../components/Modals/ConnectToAWalletModal
 import EthAndSelectModal from "../../components/Modals/EthAndSelectModal";
 import "./Swap.scss";
 import SettingsOverlay from "../../components/Header/SettingsOverlay";
+import SettingOverlay from "../../components/Header/SettingOverlay";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -73,12 +74,19 @@ const Swap = () => {
             <div className="swap-container-header-right">
               <img src={settingIcon} onClick={handleClick} alt="settings" />
             </div>
-            <SettingsOverlay
+            {/* <SettingOverlay
+              show={show}
+              onHide={handleHide}
+              target={target}
+              handleHide={handleHide}
+              handleSlippageValue={handleSlippageValue}
+            /> */}
+            {/* <SettingsOverlay
               show={show}
               target={target}
               handleHide={handleHide}
               handleSlippageValue={handleSlippageValue}
-            />
+            /> */}
           </div>
           <div className="left-content">
             <div className="border-box">
@@ -214,6 +222,15 @@ const Swap = () => {
         show={selectTokenModal}
         onHide={() => setSelectTokenModal(false)}
       />
+      <>
+      <SettingOverlay
+              show={show}
+              onHide={handleHide}
+              target={target}
+              handleHide={handleHide}
+              handleSlippageValue={handleSlippageValue}
+            />
+            </>
     </div>
   );
 };
